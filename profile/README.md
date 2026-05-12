@@ -1,134 +1,125 @@
 # Korysnyk
 
-Mobile and web application for product barcode scanning with comprehensive ingredient analysis and health safety assessment.
+AI-powered platform for analysis of food, cosmetics and household chemicals via barcode scanning. Mobile app for iOS and Android, web admin dashboard, multi-tenant backend.
 
-*The name derives from Ukrainian "корисний" (useful) + suffix "-nik" — a helper in making beneficial product choices.*
+*The name derives from Ukrainian "корисний" (useful) plus the suffix "-nyk", literally a helper in making beneficial choices.*
 
-## Project Description
+Current status: public beta on the Ukrainian market, preparing for expansion to European markets.
 
-The platform provides consumers with tools for making informed decisions about food purchases. Users scan barcodes and receive detailed ingredient analysis, including potential health risks and personalized recommendations.
+Website: https://korysnyk.care
+API: https://api.korysnyk.care
+Admin: https://dashboard.korysnyk.care
+
+## Overview
+
+Korysnyk lets consumers scan a barcode and receive instant analysis of a product, covering ingredient safety, nutritional value and personal compatibility with the user's health profile. The platform supports three product categories: food, cosmetics, household chemicals.
+
+Analysis is performed at two levels.
+
+- Lumi, general analysis of composition, cached by EAN13, available for any user
+- Swapr, personal recommendations based on the user's health profile, cached by the sha256 hash of the profile
 
 ## Features
 
-**Mobile Application**
-- Real-time barcode scanning
-- Product composition display with ingredient breakdown
-- Safety assessment and health impact analysis
-- Allergen detection and warnings
-- Nutritional information
-- Scan history and favorites
-- Basic offline functionality
+Barcode scanner
 
-**Web Platform**
-- Product database with advanced search
-- Safety articles and research
-- User community and reviews
-- Product comparison tools
-- Health criteria filtering
-- User-generated content and ratings
-- Health and nutrition content library
+- EAN-13, EAN-8, UPC-A, UPC-E with checksum validation
+- Voice and text search
+- Submission of packaging photos for moderation when a product is missing from the database
+- Per-user scan history persisted server-side
 
-**Technology Capabilities**
-- Cross-platform development (Flutter)
-- Responsive web interface
-- Product and ingredient database
-- Machine learning-based safety classification algorithms
-- User authentication and profile management
-- Content moderation
-- Integration with food safety databases
-- Real-time data synchronization
+Product analysis
 
-## Target Audience
+- Overall safety score 0 to 100 with color indicator
+- Safety level classification, high / medium / low
+- Nutri-Score grade A to E
+- NOVA group for food processing level
+- Positive, negative and missing nutrients
+- Text warnings for specific ingredients
+- INCI standard for cosmetics, safety profile for household chemicals
 
-The platform is designed for consumers seeking conscious food choices:
-- Individuals with dietary restrictions and allergies
-- Parents choosing safe products for families
-- Consumers managing chronic conditions (diabetes, high cholesterol)
-- Health and wellness community
+Personalization
+
+- Health profile with allergies, chronic conditions, dietary preferences, skin type
+- Automatic allergen warnings during scanning
+- BMI computed server-side
+- Recommendations recalculated only when the profile actually changes
+
+AI assistants
+
+- Savora, culinary expert (recipes, ingredient substitution, allergen warnings)
+- Medic, nutrition advisor (cardiovascular impact, glycemic index, drug-food interactions)
+- Cosmo, expert on cosmetics and household chemicals (INCI analysis, skin type guidance, safety for pregnant and nursing users)
 
 ## Technology Stack
 
-**Frontend**
-- Flutter for mobile applications (iOS/Android)
-- React/Next.js for web platform
-- Responsive design for all devices
+Backend
 
-**Backend**
-- Python/FastAPI
-- PostgreSQL for data storage
-- Redis for caching
+- Python, Litestar 2 on uvicorn
+- SQLAlchemy 2 async with asyncpg, PostgreSQL 15+
+- Atlas for schema migrations
+- MongoDB for raw product variants
+- Meilisearch for text search and autocomplete
+- Qdrant with embeddings for semantic search and similar products
+- OpenRouter as the single LLM gateway, `google/gemini-2.5-flash-lite` by default
 
-**ML/AI**
-- LLM integration for ingredient analysis
-- Safety assessment algorithms
-- Recommendation personalization
+Mobile client
 
-**Infrastructure**
-- AWS/Google Cloud Platform
-- Docker containerization
-- CI/CD pipeline
+- Flutter for iOS and Android
+- Dio with a JWT interceptor, automatic refresh on 401 with the `TOKEN_EXPIRED` marker
+- Riverpod for state, SharedPreferences for token storage
+- Single profile synchronized across mobile and web
 
-## Database
+Web admin
 
-The platform contains information about 1250+ ingredients with characteristics:
-- Category classification
-- Potential health impact
-- Allergenic properties
-- Recommendations for different consumer groups
-- Integration with OpenFoodFacts and local databases
+- Submission moderation, role and limit management
 
-## Personalization
+Security and reliability
 
-The system accounts for individual user characteristics:
-- Allergies
-- Chronic conditions
-- Dietary preferences
-- Product reaction history
+- JWT with separate access and refresh tokens, proactive refresh five minutes before expiry
+- werkzeug password hashing
+- Soft delete with a 30-day restore window
+- CORS with wildcard subdomain support
+- GlitchTip (Sentry-compatible) for error tracking
 
-## Installation and Launch
+## Action Limits
 
-Repository: https://github.com/korysnyk
+| Action          | Type                       | Free plan       |
+| --------------- | -------------------------- | --------------- |
+| scan            | barcode scan               | 40 / day, 90 / week |
+| chat_create     | new chat                   | 2 / week        |
+| chat_message    | chat message               | 40 / week       |
+| product_submit  | submission for moderation  | 40 / day, 80 / week |
 
-Detailed installation and configuration instructions are available in the project documentation.
+Premium tiers `premium_2x`, `premium_5x`, `premium_10x` multiply the base limits by the corresponding coefficient.
 
-## Development
+## Privacy
 
-The project uses modular architecture with separation into independent components:
-- Mobile application (separate repository)
-- Web platform (separate repository)
-- Backend API
-- ML models and algorithms
+Health data is sensitive by design.
 
-## Contributing
+- Data is stored only on Korysnyk servers, no transfer to third parties
+- Soft delete with a 30-day restore window, then complete erasure
+- JWT-based authentication with separate access and refresh tokens
+- GDPR-aligned account deletion flow
 
-1. Fork the repository
-2. Create feature branch
-3. Commit changes with description
-4. Push to branch
-5. Create pull request
+## Repositories
+
+Source code is kept in private repositories. The public organization page hosts marketing materials, legal documents and limited supporting artifacts only. API access for third-party developers is planned, contact the team for details.
+
+## Languages
+
+Ukrainian and English. The AI assistants understand both languages; coverage of products on the Ukrainian market is more complete in the Ukrainian dataset.
 
 ## License
 
-The project uses a proprietary license. All rights reserved.
+Proprietary. All rights reserved. See [LICENSE](https://github.com/Korysnyk/.github/blob/main/LICENSE) for the full text.
 
-## Author
+## Contacts
 
-**Yurii Kachaniuk**
-- Email: wku@ukr.net
-- Telegram: @trimbler
+- Support, partnerships and licensing: admin@korysnyk.care
+- Author: Yurii Kachaniuk, Telegram [@trimbler](https://t.me/trimbler)
+- Legal entity: Korysnyk LTD, England and Wales
 
-## Project Contact
+---
 
-Email: admin@korysnyk.care
-
-## Support
-
-Questions, suggestions, and technical support: contact the author or create an issue in the repository.
-
-## Development Status
-
-The project is in active development. MVP launch is planned for the Ukrainian market with subsequent functionality and geographic expansion.
-
-## Partnership Contacts
-
-The project is open to collaboration with food manufacturers, distributors, medical organizations, and research centers.   
+Copyright (c) 2025-2026 Korysnyk LTD. All rights reserved.
