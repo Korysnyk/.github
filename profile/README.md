@@ -119,6 +119,8 @@ Proprietary. All rights reserved. See [LICENSE](https://github.com/Korysnyk/.git
 - Support, partnerships and licensing: admin@korysnyk.care
 - Author: Yurii Kachaniuk, Telegram [@trimbler](https://t.me/trimbler)
 - Legal entity: Korysnyk LTD, England and Wales
+- Company number: 16942523
+- Registered office: 128 City Road, London, United Kingdom, EC1V 2NX
 
 ---
 
