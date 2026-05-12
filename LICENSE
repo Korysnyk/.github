@@ -1,57 +1,75 @@
-Proprietary License
+# Proprietary License
 
-Copyright (c) 2025 Yurii Kachaniuk
+Copyright (c) 2025-2026 Korysnyk LTD. All rights reserved.
 
-All rights reserved.
+Effective date: 12 May 2026
 
-This software and associated documentation files (the "Software") are the proprietary 
-and confidential information of Yurii Kachaniuk ("Owner"). The Software is licensed, 
-not sold.
+This software, together with its source code, object code, documentation, design assets, configuration files, database schemas and any related materials (collectively, the "Software"), is the proprietary and confidential property of Korysnyk LTD, a company registered in England and Wales (the "Owner"). The Software is licensed, not sold.
 
-RESTRICTIONS
+## 1. Definitions
 
-You may NOT:
-- Use, copy, modify, merge, publish, distribute, sublicense, or sell copies of the Software
-- Reverse engineer, decompile, or disassemble the Software
-- Remove or alter any proprietary notices or labels on the Software
-- Use the Software for any commercial purposes without explicit written permission
-- Transfer, loan, rent, or lease the Software to any third party
+"Licensee" means any natural or legal person who obtains access to the Software in any form.
 
-GRANT OF LICENSE
+"Authorised Use" means use expressly permitted by the Owner under a separate written agreement signed by an authorised representative of Korysnyk LTD.
 
-Subject to the terms and conditions of this License, the Owner may grant you a limited, 
-non-exclusive, non-transferable license to use the Software solely for evaluation or 
-demonstration purposes.
+## 2. No Grant by Default
 
-INTELLECTUAL PROPERTY
+No licence, right or interest in the Software is granted to any person by the mere act of viewing, downloading, cloning or otherwise accessing the Software or any part of it. Any use of the Software outside Authorised Use is prohibited.
 
-The Software contains trade secrets and proprietary information of the Owner. All title 
-and intellectual property rights in and to the Software remain the exclusive property 
-of the Owner.
+## 3. Restrictions
 
-DISCLAIMER OF WARRANTY
+Without prior written permission from the Owner, the Licensee shall not.
 
-THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
-PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+- Use, copy, modify, adapt, translate, merge, publish, distribute, sublicense, sell, rent, lease, loan or otherwise transfer the Software or any part of it
+- Reverse engineer, decompile, disassemble or otherwise attempt to derive the source code, underlying ideas, algorithms, file formats or interfaces of the Software, except to the extent such activity is expressly permitted by mandatory applicable law and only after prior written notice to the Owner
+- Remove, obscure or alter any copyright, trademark or other proprietary notices contained in or on the Software
+- Use the Software for any commercial purpose, including service provision to third parties, internal business operations or AI model training
+- Use the Software to develop a competing product or service
+- Combine, link or integrate the Software with software released under terms that would require disclosure of the Software's source code or weaken the Owner's intellectual property rights
 
-LIMITATION OF LIABILITY
+## 4. Evaluation and Demonstration
 
-IN NO EVENT SHALL THE OWNER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, 
-WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN 
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Subject to the terms below, the Owner may grant a limited, revocable, non-exclusive, non-transferable, royalty-free licence to a specific Licensee solely for internal evaluation or demonstration purposes for a period not exceeding thirty (30) days. Such licence becomes effective only upon explicit written confirmation from the Owner identifying the Licensee, the permitted scope and the duration. Until such confirmation is issued, no rights are granted.
 
-TERMINATION
+## 5. Intellectual Property
 
-This License is effective until terminated. Your rights under this License will 
-terminate automatically without notice if you fail to comply with any term of this 
-License.
+The Software contains trade secrets, know-how and proprietary information of the Owner. All right, title and interest in and to the Software, including all intellectual property rights, remain the exclusive property of the Owner. No implied licences are granted under this document, whether by estoppel, exhaustion or otherwise.
 
-CONTACT
+## 6. Third-Party Components
 
-For licensing inquiries, please contact:
-Email: admin@korysnyk.care
+The Software incorporates open-source and third-party components that are licensed under their own respective terms. Those components remain subject to their original licences and are not covered by this Proprietary License. A list of such components and their licences is maintained in the Software's documentation. Nothing in this document modifies, limits or supersedes the rights granted under any such third-party licence.
+
+## 7. Confidentiality
+
+The Software, including its non-public functionality, architecture, data models, prompts and configuration, constitutes confidential information of the Owner. The Licensee shall protect such information using at least the same degree of care as it uses for its own confidential information, and in no event less than a reasonable standard of care. The confidentiality obligation survives termination of this License.
+
+## 8. Disclaimer of Warranty
+
+The Software is provided "as is" and "as available", without warranty of any kind, express, implied or statutory, including without limitation any warranties of merchantability, fitness for a particular purpose, accuracy, non-infringement, uninterrupted operation or freedom from defects. The Licensee assumes all risk arising from use of the Software.
+
+## 9. Limitation of Liability
+
+To the maximum extent permitted by applicable law, in no event shall the Owner, its directors, officers, employees or contractors be liable for any indirect, incidental, special, consequential, punitive or exemplary damages, or for any loss of profits, revenue, data, goodwill or business opportunity, arising out of or in connection with the Software or this License, regardless of the legal theory and even if the Owner has been advised of the possibility of such damages. The Owner's aggregate liability under this License shall not exceed one hundred pounds sterling (£100). Nothing in this section limits liability that cannot be excluded under mandatory applicable law, including liability for death or personal injury caused by negligence, or for fraud.
+
+## 10. Termination
+
+This License is effective until terminated. The Owner may terminate it at any time, with or without cause, by written notice. The rights of the Licensee terminate automatically and without notice upon any breach of this License. Upon termination the Licensee shall immediately cease all use of the Software, destroy all copies in its possession or control and, upon request, confirm such destruction in writing. Sections 3, 5, 6, 7, 8, 9, 11 and 12 survive termination.
+
+## 11. Governing Law and Jurisdiction
+
+This License is governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of laws rules. The courts of England and Wales shall have exclusive jurisdiction over any dispute arising out of or in connection with this License, save that the Owner retains the right to bring proceedings in any other jurisdiction for the protection of its intellectual property rights.
+
+## 12. Miscellaneous
+
+If any provision of this License is held to be unenforceable, the remaining provisions shall remain in full force and effect. No waiver of any breach shall be deemed a waiver of any subsequent breach. The Licensee may not assign or transfer this License without the prior written consent of the Owner. This License constitutes the entire agreement between the parties with respect to the Software and supersedes all prior understandings, oral or written.
+
+## 13. Contact
+
+For licensing inquiries please contact.
+
+- Email: admin@korysnyk.care
+- Entity: Korysnyk LTD, England and Wales
 
 ---
 
-Copyright (c) 2025 Yurii Kachaniuk. All rights reserved.
+Copyright (c) 2025-2026 Korysnyk LTD. All rights reserved.
